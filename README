@@ -1,0 +1,7 @@
+run mysql backup
+./mysqldump.sh dbname1 dbname2 dbname3 ....
+on exit see file specified in $pathTo variable
+
+run folder backup
+./backup.sh folderSrc folderDst
+and on exit you see tar archive with name folder_DATE.tar.gz
