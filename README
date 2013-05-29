@@ -5,3 +5,10 @@ on exit see file specified in $pathTo variable
 run folder backup
 ./backup.sh folderSrc folderDst
 and on exit you see tar archive with name folder_DATE.tar.gz
+
+
+EXAMPLES:
+copy mysite to Dropbox folder every friday
+0 0 * * 6 sepuka /home/***/bin/backuper.sh /srv/www/mysite/ /home/***/Dropbox/backup 2>&1 1>>/tmp/backuper.log
+copy my DB to Dropbox folder every friday
+0 0 * * 6 sepuka /home/***/bin/mysqldumper.sh dbname1 dbname2 2>&1 1>>/tmp/backuper.log
