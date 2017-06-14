@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 case $# in
     2) pathFrom=$1; pathTo=$2 ;;
     *) echo "Expected first parameter for archive, second - destination path"; exit 1 ;;
@@ -10,7 +10,7 @@ pathFull="$pathTo/$dirName""_""$fileName.tar.gz"
 
 if ! test -w $pathTo
 then
-    echo "enabled to write $pathTo"
+    echo "unable to write $pathTo"
     exit 1
 else
     tar czf $pathFull $pathFrom

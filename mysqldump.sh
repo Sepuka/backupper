@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 pathTo='/tmp'
 dbuser='root'
 dbpass='1'
