@@ -3,6 +3,17 @@ pathTo='/tmp'
 dbuser='root'
 dbpass='1'
 
+check_bzip() {
+    type bzip2 $2>1 $1>/dev/null
+    if [ $? != 0 ]
+    then
+        echo 'bzip2 not found!'
+        exit 1
+    fi
+}
+
+check_bzip
+
 if [ $# == 0 ]
 then
         echo 'Expected Database names'
